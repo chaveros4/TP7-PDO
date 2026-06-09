@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+
+class Operaciones {
+private:
+    int a, b;
+public:
+    void cargar();
+    void suma();
+    void resta();
+    void multiplicacion();
+    void division();
+};
+
+void Operaciones::cargar() {
+    cout << "Ingrese primer valor: ";
+    cin >> a;
+    cout << "Ingrese segundo valor: ";
+    cin >> b;
+}
+
+void Operaciones::suma() {
+    cout << "Suma: " << a + b << "\n";
+}
+
+void Operaciones::resta() {
+    cout << "Resta: " << a - b << "\n";
+}
+
+void Operaciones::multiplicacion() {
+    cout << "Multiplicacion: " << a * b << "\n";
+}
+
+void Operaciones::division() {
+    if (b != 0)
+        cout << "Division: " << (float)a / b << "\n";
+    else
+        cout << "Error: division por cero.\n";
+}
+
+int main() {
+    Operaciones op;
+    op.cargar();
+    op.suma();
+    op.resta();
+    op.multiplicacion();
+    op.division();
+    return 0;
+}
