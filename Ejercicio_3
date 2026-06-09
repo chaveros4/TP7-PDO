@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+class Cuadrado {
+private:
+    float lado;
+public:
+    void cargarLado();
+    void imprimirPerimetro();
+    void imprimirSuperficie();
+};
+
+void Cuadrado::cargarLado() {
+    cout << "Ingrese el lado del cuadrado: ";
+    cin >> lado;
+}
+
+void Cuadrado::imprimirPerimetro() {
+    cout << "Perimetro: " << 4 * lado << "\n";
+}
+
+void Cuadrado::imprimirSuperficie() {
+    cout << "Superficie: " << lado * lado << "\n";
+}
+
+int main() {
+    Cuadrado c;
+    c.cargarLado();
+    c.imprimirPerimetro();
+    c.imprimirSuperficie();
+    return 0;
+}
